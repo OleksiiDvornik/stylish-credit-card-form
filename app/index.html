@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Credit card form</title>
+</head>
+<body class="body">
+    <div class="container">
+        <div class="card">
+            <div class="card__front">
+                <p class="card__bank-name">The bank of Earth</p>
+                <p class="card__number" data-card="number">XXXX XXXX XXXX XXXX</p>
+                <div class="card__info">
+                    <div>
+                        <p class="card__info-title">Card Holder</p>
+                        <p class="card__info-name" data-card="holder">Oleksii Dvornik</p>
+                    </div>
+                    <div class="card__info-box">
+                        <p class="card__info-title">Exp. Date</p>
+                        <p class="card__info-date">
+                            <span data-card="month">10</span>/
+                            <span data-card="year">24</span>
+                        </p>
+                    </div>
+                    <img class="card__info-logo" src="./assets/img/mastercard-logo.svg" alt="Card logo">
+                </div>
+            </div>
+            <div class="card__back">
+                <div class="card__stripe"></div>
+                <div class="card__cvv">
+                    <span class="card__cvv-title">CVV</span>
+                    <div class="card__cvv-box" data-card="cvv"></div>
+                </div>
+            </div>
+        </div>
+        <form class="form" action="https://fom.in.ua/echo" method="post">
+            <label>
+                <span class="form__title">Card Number</span>
+                <input class="form__input" data-form="number" type="number">
+            </label>
+            <label>
+                <span class="form__title">Card Holder</span>
+                <input class="form__input" data-form="holder" type="text" maxlength="20">
+            </label>
+            <div class="form__date-and-cvv">
+                <div class="form__exp-date">
+                    <span class="form__title">Expiration Date</span>
+                    <label>
+                        <select class="form__month" data-form="month" name="month">
+                            <option value="" selected disabled>Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </label>
+                    <label>
+                        <select class="form__year" data-form="year" name="year">
+                            <option value="" selected disabled>Year</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="form__cvv">
+                    <label>
+                        <span class="form__title">CVV</span>
+                        <input class="form__input" data-form="cvv" type="text">
+                    </label>
+                </div>
+            </div>
+            <button class="form__button" type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>

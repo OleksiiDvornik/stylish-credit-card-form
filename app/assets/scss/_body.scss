@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-height: 100vh;
+    background-color: $bodyBgColor;
+    background-image: $bodyBgGradient;
+    font-family: $formFont;
+    font-weight: normal;
+    font-style: normal;
+    font-size: $fontSize;
+    color: $textSecondary;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    min-width: 320px;
+    padding: 20px;
+    margin: 0 auto;
+}

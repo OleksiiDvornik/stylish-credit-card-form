@@ -1,0 +1,84 @@
+.form {
+    width: 560px;
+    background-color: $formBgColor;
+    padding: 130px 30px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    top: -100px;
+    margin-bottom: -100px;
+
+    &__title {
+        display: block;
+        color: $textSecondary;
+        font-size: 0.9rem;
+        padding-bottom: 8px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid $inputBorder;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+
+        &:focus {
+            outline-color: $inputOutline;
+        }
+
+        &::-webkit-outer-spin-button, 
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &[type=number] {
+            -moz-appearance: textfield;
+        }
+    }
+
+    &__date-and-cvv {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__month, 
+    &__year {
+        width: 150px;
+        font-size: 1rem;
+        padding: 10px;
+        border: 2px solid $inputBorder;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+
+    &__cvv {
+        width: 150px;
+        margin-left: auto;
+    }
+
+    &__button {
+        width: 100%;
+        padding: 10px;
+        color: $textPrimary;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: $buttonBgColor;
+        border: 2px solid $inputBorder;
+        border-radius: 4px;
+        transition: 0.2s;
+
+        &:hover, 
+        &:focus {
+            outline: none;
+            cursor: pointer;
+            background-color: $buttonBgColorHover;
+        }
+
+        &:disabled {
+            background-color: $buttonBgColorDisabled;
+        }
+    }
+}
