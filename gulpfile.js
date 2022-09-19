@@ -40,7 +40,9 @@ function styles() {
 }
 
 function scripts() {
-    return browserSync.stream()
+    return gulp.src(paths.scripts.src)
+        .pipe(gulp.dest(paths.scripts.dest))
+        .pipe(browserSync.stream())
 }
 
 // File watchers
@@ -53,7 +55,7 @@ function watch() {
     })
     gulp.watch(paths.html.src).on('change', browserSync.reload);
     gulp.watch(paths.styles.src, styles);
-    gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(paths.scripts.src), scripts;
 }
 
 // Commands for tasks running
