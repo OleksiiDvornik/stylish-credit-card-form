@@ -95,7 +95,7 @@ function CardForm(elements) {
     };
   
     this.submit = function() {
-        const { formFields, form } = this.elements;
+        const { formFields, form, submit } = this.elements;
         form.addEventListener('submit', (event) => {
             event.preventDefault();
             const data = {
@@ -110,6 +110,7 @@ function CardForm(elements) {
             formFields.month.value = '';
             formFields.year.value = '';
             formFields.cvv.value = '';
+            submit.disabled = true;
         });
     };
 
