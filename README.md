@@ -27,4 +27,4 @@ $ gulp start // Run gulp in dev mode
 
 ## Demo
 
-![Demo](https://github.com/OleksiiDvornik/react-todo-app/blob/main/demo.gif)
+![Demo](https://github.com/OleksiiDvornik/stylish-credit-card-form/blob/main/demo.gif)
