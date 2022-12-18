@@ -1,4 +1,4 @@
-# Stylish credit card form on pure JS
+# Stylish credit card form on native JS
 
 ![Todo app preview cover](https://repository-images.githubusercontent.com/539060518/f5d927cf-2d45-4551-b0d6-f297e2d80511)
 
